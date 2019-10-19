@@ -5,4 +5,5 @@ enum Emblems : String {
     case Jungle
     case Assassin
     case Mage
+    case Fighter
 }

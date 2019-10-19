@@ -27,8 +27,11 @@ class EmblemDater {
             case .Assassin:
                 let newDate =  self.dateFormatAdapter.add(days: 15, startDate: currentDate)
                 return newDate.description
-            default:
+            case .Mage:
                 let newDate =  self.dateFormatAdapter.add(days: 18, startDate: currentDate)
+                return newDate.description
+            default:
+                let newDate =  self.dateFormatAdapter.add(days: 21, startDate: currentDate)
                 return newDate.description
             }
         }
