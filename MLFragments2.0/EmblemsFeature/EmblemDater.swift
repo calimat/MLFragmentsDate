@@ -21,8 +21,11 @@ class EmblemDater {
             case .Tank:
                 let newDate =  self.dateFormatAdapter.add(days: 9, startDate: currentDate)
                 return newDate.description
-            default:
+            case .Jungle:
                 let newDate =  self.dateFormatAdapter.add(days: 12, startDate: currentDate)
+                return newDate.description
+            default:
+                let newDate =  self.dateFormatAdapter.add(days: 15, startDate: currentDate)
                 return newDate.description
             }
         }

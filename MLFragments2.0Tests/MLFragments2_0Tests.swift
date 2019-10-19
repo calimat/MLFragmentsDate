@@ -30,6 +30,10 @@ class MLFragments2_0Tests: XCTestCase {
               XCTAssertEqual(nextAvailableDate,"2019-10-30 08:00:00 +0000")
     }
 
+    func test_NextCurrentAvailableDateForAssasinWhenCurrentDateIs18Oct2019() {
+        let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Assassin  ,currentDate: currentDate)
+                 XCTAssertEqual(nextAvailableDate,"2019-11-02 08:00:00 +0000")
+    }
     
     
     

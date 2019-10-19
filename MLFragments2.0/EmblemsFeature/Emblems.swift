@@ -3,4 +3,5 @@ enum Emblems : String {
     case MarksMan
     case Tank
     case Jungle
+    case Assassin
 }
