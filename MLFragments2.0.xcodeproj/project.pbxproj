@@ -10,6 +10,8 @@
 		F6384F6C235A9E31001D1D15 /* MLFragments2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6384F62235A9E31001D1D15 /* MLFragments2_0.framework */; };
 		F6384F71235A9E31001D1D15 /* MLFragments2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F70235A9E31001D1D15 /* MLFragments2_0Tests.swift */; };
 		F6384F73235A9E31001D1D15 /* MLFragments2_0.h in Headers */ = {isa = PBXBuildFile; fileRef = F6384F65235A9E31001D1D15 /* MLFragments2_0.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6384F7D235ACC7A001D1D15 /* EmblemDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F7C235ACC7A001D1D15 /* EmblemDater.swift */; };
+		F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F7E235ACC9E001D1D15 /* Emblems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		F6384F6B235A9E31001D1D15 /* MLFragments2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLFragments2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6384F70235A9E31001D1D15 /* MLFragments2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLFragments2_0Tests.swift; sourceTree = "<group>"; };
 		F6384F72235A9E31001D1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6384F7C235ACC7A001D1D15 /* EmblemDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmblemDater.swift; sourceTree = "<group>"; };
+		F6384F7E235ACC9E001D1D15 /* Emblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emblems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				F6384F65235A9E31001D1D15 /* MLFragments2_0.h */,
 				F6384F66235A9E31001D1D15 /* Info.plist */,
+				F6384F7C235ACC7A001D1D15 /* EmblemDater.swift */,
+				F6384F7E235ACC9E001D1D15 /* Emblems.swift */,
 			);
 			path = MLFragments2.0;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					F6384F61235A9E31001D1D15 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					F6384F6A235A9E31001D1D15 = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6384F7D235ACC7A001D1D15 /* EmblemDater.swift in Sources */,
+				F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 		F6384F77235A9E31001D1D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.petitcoding.MLFragments2-0";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -363,6 +374,7 @@
 		F6384F78235A9E31001D1D15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -387,6 +399,7 @@
 		F6384F7A235A9E31001D1D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
@@ -405,6 +418,7 @@
 		F6384F7B235A9E31001D1D15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
