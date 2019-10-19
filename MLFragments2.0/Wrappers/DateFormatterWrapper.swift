@@ -3,7 +3,6 @@ import Foundation
 class DateFormatterWrapper : DataFormaterAdapter {
     func convert(isoStringDate: String) -> Date {
         let dateFormatter = ISO8601DateFormatter()
-       // dateFormatter.formatOptions = [.withTimeZone]
         let date = dateFormatter.date(from:isoStringDate)!
         return date
     }

@@ -1,11 +1,3 @@
-//
-//  EmblemDateCalculatorTests.swift
-//  MLFragments2.0Tests
-//
-//  Created by Ricardo Herrera Petit on 10/18/19.
-//  Copyright © 2019 Ricardo Herrera Petit. All rights reserved.
-//
-
 import XCTest
 class EmblemCalculator {
     func add(days:Int, startDate:String) -> String {

@@ -1,11 +1,3 @@
-//
-//  MLFragments2_0Tests.swift
-//  MLFragments2.0Tests
-//
-//  Created by Ricardo Herrera Petit on 10/18/19.
-//  Copyright © 2019 Ricardo Herrera Petit. All rights reserved.
-//
-
 import XCTest
 @testable import MLFragments2_0
 
