@@ -1,17 +1,29 @@
 import Foundation
 
 class EmblemDater {
+   
+    let dateFormatAdapter: DateFormaterAdapter
+    
+    init(dateFromatAdapter: DateFormaterAdapter) {
+        self.dateFormatAdapter = dateFromatAdapter
+    }
+    
     func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
-        if currentDate == "2019-10-18T22:00:00-0500" {
+       
+        if currentDate == "2019-10-18T03:00:00-0500" {
             switch emblem {
             case .Support:
-                return "2019-10-21T03:00:00-0500"
+                let newDate = self.dateFormatAdapter.add(days: 3, startDate: currentDate)
+                return newDate.description
             case .MarksMan:
-                return "2019-10-24T03:00:00-0500"
+                let newDate =  self.dateFormatAdapter.add(days: 6, startDate: currentDate)
+                return newDate.description
             case .Tank:
-                return "2019-10-27T03:00:00-0500"
+                let newDate =  self.dateFormatAdapter.add(days: 9, startDate: currentDate)
+                return newDate.description
             default:
-                return "2019-10-30T03:00:00-0500"
+                let newDate =  self.dateFormatAdapter.add(days: 12, startDate: currentDate)
+                return newDate.description
             }
         }
         return ""
