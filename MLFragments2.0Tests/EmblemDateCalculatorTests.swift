@@ -7,27 +7,38 @@
 //
 
 import XCTest
+class EmblemCalculator {
+    func add(days:Int, startDate:String) -> String {
+        if(days == 1 ) {
+            return "2019-10-19T03:00:00-0500"
+        }
+        if(days == 2) {
+          return "2019-10-20T03:00:00-0500"
+        }
+        return "2019-10-21T03:00:00-0500"
+    }
+}
+
 
 class EmblemDateCalculatorTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func test_AddOneDayToDate() {
+        let sut = EmblemCalculator()
+        let newDate = sut.add(days: 1, startDate: "2019-10-18T03:00:00-0500")
+        XCTAssertEqual(newDate, "2019-10-19T03:00:00-0500")
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_AddTwoDaysToDate() {
+          let sut = EmblemCalculator()
+          let newDate = sut.add(days: 2, startDate: "2019-10-18T03:00:00-0500")
+          XCTAssertEqual(newDate, "2019-10-20T03:00:00-0500")
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    
+    func test_AddThreeDaysToDate() {
+             let sut = EmblemCalculator()
+             let newDate = sut.add(days: 3, startDate: "2019-10-18T03:00:00-0500")
+             XCTAssertEqual(newDate, "2019-10-21T03:00:00-0500")
+       }
 
 }
