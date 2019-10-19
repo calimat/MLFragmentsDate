@@ -12,7 +12,6 @@
 		F6384F73235A9E31001D1D15 /* MLFragments2_0.h in Headers */ = {isa = PBXBuildFile; fileRef = F6384F65235A9E31001D1D15 /* MLFragments2_0.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6384F7D235ACC7A001D1D15 /* EmblemDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F7C235ACC7A001D1D15 /* EmblemDater.swift */; };
 		F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F7E235ACC9E001D1D15 /* Emblems.swift */; };
-		F6384F81235ACEED001D1D15 /* EmblemDateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F80235ACEED001D1D15 /* EmblemDateCalculatorTests.swift */; };
 		F6384F83235B7102001D1D15 /* DateFormatterWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */; };
 		F6384F85235B7BDF001D1D15 /* DateFormatterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */; };
 		F6384F87235B7C0F001D1D15 /* DataFormaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F86235B7C0F001D1D15 /* DataFormaterAdapter.swift */; };
@@ -37,7 +36,6 @@
 		F6384F72235A9E31001D1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6384F7C235ACC7A001D1D15 /* EmblemDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmblemDater.swift; sourceTree = "<group>"; };
 		F6384F7E235ACC9E001D1D15 /* Emblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emblems.swift; sourceTree = "<group>"; };
-		F6384F80235ACEED001D1D15 /* EmblemDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmblemDateCalculatorTests.swift; sourceTree = "<group>"; };
 		F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapperTests.swift; sourceTree = "<group>"; };
 		F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapper.swift; sourceTree = "<group>"; };
 		F6384F86235B7C0F001D1D15 /* DataFormaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormaterAdapter.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			children = (
 				F6384F70235A9E31001D1D15 /* MLFragments2_0Tests.swift */,
 				F6384F72235A9E31001D1D15 /* Info.plist */,
-				F6384F80235ACEED001D1D15 /* EmblemDateCalculatorTests.swift */,
 				F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */,
 			);
 			path = MLFragments2.0Tests;
@@ -251,7 +248,6 @@
 			files = (
 				F6384F71235A9E31001D1D15 /* MLFragments2_0Tests.swift in Sources */,
 				F6384F83235B7102001D1D15 /* DateFormatterWrapperTests.swift in Sources */,
-				F6384F81235ACEED001D1D15 /* EmblemDateCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
