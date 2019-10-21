@@ -1,7 +1,7 @@
 import Foundation
 
 class EmblemDater {
-   
+    
     let dateFormatAdapter: DateFormaterAdapter
     let baseDateStringFighterEmblem = "2019-10-18T03:00:00-0500"
     
@@ -46,12 +46,15 @@ class EmblemDater {
         var currentEmblem = Emblems.Fighter
         var days = 0
         while(baseDate < dateForEmblem) {
-            days += 3
-            currentEmblemIndex = (currentEmblemIndex + 1) % emblemsArray.count
-            currentEmblem = emblemsArray[currentEmblemIndex]
+            days += 1
+            if( days % 3 == 0) {
+                currentEmblemIndex = (currentEmblemIndex + 1) % emblemsArray.count
+                currentEmblem = emblemsArray[currentEmblemIndex]
+            }
+            
             baseDate = dateFormatAdapter.add(days: days, startDate: baseDateStringFighterEmblem)
         }
         return currentEmblem
-
+        
     }
 }

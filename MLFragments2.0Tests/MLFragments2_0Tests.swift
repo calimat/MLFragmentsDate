@@ -80,4 +80,10 @@ class MLFragments2_0Tests: XCTestCase {
         let emblem = sut.getEmblemForDate(date: "2019-11-05T03:00:00-0500")
         XCTAssertEqual(emblem, Emblems.Mage)
     }
+    
+    func test_GetCurrentEmblemFighterFor2019_10_19() {
+        let emblem = sut.getEmblemForDate(date: "2019-10-19T03:00:00-0500")
+        XCTAssertEqual(emblem, Emblems.Fighter)
+        
+    }
 }
