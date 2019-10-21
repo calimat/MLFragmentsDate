@@ -40,7 +40,7 @@ class EmblemDater {
     
     func getEmblemForDate(date:String) -> Emblems {
         var baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
-        let emblemsArray = [Emblems.Fighter, Emblems.Support, Emblems.MarksMan, Emblems.Tank, Emblems.Jungle]
+        let emblemsArray = [Emblems.Fighter, Emblems.Support, Emblems.MarksMan, Emblems.Tank, Emblems.Jungle, Emblems.Assassin]
         let dateForEmblem = dateFormatAdapter.date(isoStringDate: date)
         var currentEmblemIndex = 0
         var currentEmblem = Emblems.Fighter
