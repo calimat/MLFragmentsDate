@@ -39,19 +39,19 @@ class EmblemDater {
     }
     
     func getEmblemForDate(date:String) -> Emblems {
-        let baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
-        if date == baseDate.description {
-             return .Fighter
+        var baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
+        let emblemsArray = [Emblems.Fighter, Emblems.Support, Emblems.MarksMan, Emblems.Tank, Emblems.Jungle]
+        let dateForEmblem = dateFormatAdapter.date(isoStringDate: date)
+        var currentEmblemIndex = 0
+        var currentEmblem = Emblems.Fighter
+        var days = 0
+        while(baseDate < dateForEmblem) {
+            days += 3
+            currentEmblemIndex = (currentEmblemIndex + 1) % emblemsArray.count
+            currentEmblem = emblemsArray[currentEmblemIndex]
+            baseDate = dateFormatAdapter.add(days: days, startDate: baseDateStringFighterEmblem)
         }
-        if date == dateFormatAdapter.add(days: 3, startDate: baseDateStringFighterEmblem).description {
-             return .Support
-        }
-        if date == dateFormatAdapter.add(days: 6, startDate: baseDateStringFighterEmblem).description {
-            return .MarksMan
-        }
-        if date == dateFormatAdapter.add(days: 9, startDate: baseDateStringFighterEmblem).description {
-            return .Tank
-        }
-        return .Jungle
+        return currentEmblem
+
     }
 }
