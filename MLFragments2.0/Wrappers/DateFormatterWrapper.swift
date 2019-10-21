@@ -13,6 +13,10 @@ class DateFormatterWrapper : DateFormaterAdapter {
         return newDate
     }
     func string(date: Date) -> String {
-        return "1970-01-01T07:00:00-0500"
+        let dateFormatter = ISO8601DateFormatter()
+         dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
+        dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone, .withFullTime]
+        let stringDate = dateFormatter.string(from: date)
+        return stringDate
     }
 }

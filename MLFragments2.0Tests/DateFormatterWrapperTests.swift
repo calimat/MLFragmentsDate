@@ -29,12 +29,15 @@ class DateFormatterWrapperTests: XCTestCase {
     }
     
     func testDateFrom1970ToString() {
-        //1970-01-01 00:00:00 +0000
         let date = Date(timeIntervalSince1970: 0)
         let newStringDate = sut.string(date: date)
-        XCTAssertEqual(newStringDate, "1970-01-01T07:00:00-0500")
+        XCTAssertEqual(newStringDate, "1969-12-31T19:00:00-05:00")
     }
     
-  
+    func testDateFrom1970And1ToString() {
+        let date = Date(timeIntervalSince1970: 1)
+        let newStringDate = sut.string(date: date)
+        XCTAssertEqual(newStringDate, "1969-12-31T19:00:01-05:00")
+    }
     
 }
