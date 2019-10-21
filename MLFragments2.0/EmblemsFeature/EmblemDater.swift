@@ -49,6 +49,9 @@ class EmblemDater {
         if date == dateFormatAdapter.add(days: 6, startDate: baseDateStringFighterEmblem).description {
             return .MarksMan
         }
-        return .Tank
+        if date == dateFormatAdapter.add(days: 9, startDate: baseDateStringFighterEmblem).description {
+            return .Tank
+        }
+        return .Jungle
     }
 }
