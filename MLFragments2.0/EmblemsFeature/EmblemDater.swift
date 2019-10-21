@@ -9,7 +9,7 @@ class EmblemDater {
         self.dateFormatAdapter = dateFromatAdapter
     }
     
-    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
+    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {       
         if currentDate == baseDateStringFighterEmblem {
             switch emblem {
             case .Support:
