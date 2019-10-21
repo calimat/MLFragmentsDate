@@ -6,13 +6,13 @@ class DateFormatterWrapperTests: XCTestCase {
 
     func testPassingAISODateConvertToDateIsNotNil() {
         let sut = DateFormatterWrapper()
-        let date = sut.convert(isoStringDate: "2019-10-18T03:00:00-0500")
+        let date = sut.date(isoStringDate: "2019-10-18T03:00:00-0500")
         XCTAssertNotNil(date)
     }
 
     func testPassingAISODateConvertToDateIsCorrectDate() {
            let sut = DateFormatterWrapper()
-           let date = sut.convert(isoStringDate: "2019-10-18T03:00:00-0500")
+           let date = sut.date(isoStringDate: "2019-10-18T03:00:00-0500")
         XCTAssertEqual(date.description, "2019-10-18 08:00:00 +0000")
     }
     

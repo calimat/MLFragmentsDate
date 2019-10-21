@@ -3,15 +3,14 @@ import Foundation
 class EmblemDater {
    
     let dateFormatAdapter: DateFormaterAdapter
+    let baseDateStringFighterEmblem = "2019-10-18T03:00:00-0500"
     
     init(dateFromatAdapter: DateFormaterAdapter) {
         self.dateFormatAdapter = dateFromatAdapter
     }
     
     func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
-       
-        let baseDateFighterEmblem = "2019-10-18T03:00:00-0500"
-        if currentDate == baseDateFighterEmblem {
+        if currentDate == baseDateStringFighterEmblem {
             switch emblem {
             case .Support:
                 let newDate = self.dateFormatAdapter.add(days: 3, startDate: currentDate)
@@ -40,6 +39,7 @@ class EmblemDater {
     }
     
     func getEmblemForDate(date:String) -> Emblems {
+        let baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
         if date == "2019-10-18T03:00:00-0500" {
              return .Fighter
         }
