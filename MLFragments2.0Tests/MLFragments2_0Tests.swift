@@ -61,6 +61,11 @@ class MLFragments2_0Tests: XCTestCase {
         XCTAssertEqual(emblem, Emblems.MarksMan)
     }
     
+    func test_GetCurrentEmblemMarksManFor2019_10_25() {
+        let emblem = sut.getEmblemForDate(date: "2019-10-25T03:00:00-0500")
+        XCTAssertEqual(emblem, Emblems.MarksMan)
+    }
+    
     func test_GetCurrentEmblemTankFor2019_10_27() {
         let emblem = sut.getEmblemForDate(date: "2019-10-27T03:00:00-0500")
         XCTAssertEqual(emblem, Emblems.Tank)
@@ -75,6 +80,11 @@ class MLFragments2_0Tests: XCTestCase {
         let emblem = sut.getEmblemForDate(date: "2019-11-02T03:00:00-0500")
         XCTAssertEqual(emblem, Emblems.Assassin)
     }
+    
+    func test_GetCurrentEmblemAssasinFor2019_11_04() {
+           let emblem = sut.getEmblemForDate(date: "2019-11-04T03:00:00-0500")
+           XCTAssertEqual(emblem, Emblems.Assassin)
+       }
     
     func test_GetCurrentEmblemMageFor2019_11_05() {
         let emblem = sut.getEmblemForDate(date: "2019-11-05T03:00:00-0500")
