@@ -12,4 +12,7 @@ class DateFormatterWrapper : DateFormaterAdapter {
         let newDate = date.addingTimeInterval(TimeInterval(days * 60 * 60 * 24))
         return newDate
     }
+    func string(date: Date) -> String {
+        return "1970-01-01T07:00:00-0500"
+    }
 }

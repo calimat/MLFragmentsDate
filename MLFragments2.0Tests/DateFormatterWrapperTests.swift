@@ -23,10 +23,18 @@ class DateFormatterWrapperTests: XCTestCase {
     }
     
     func testAddThreeDaysToDate() {
-        
         let strDate = "2019-10-18T08:00:00+0000"
         let newDate = sut.add(days:3, startDate: strDate)
         XCTAssertEqual(newDate.description, "2019-10-21 08:00:00 +0000")
     }
+    
+    func testDateFrom1970ToString() {
+        //1970-01-01 00:00:00 +0000
+        let date = Date(timeIntervalSince1970: 0)
+        let newStringDate = sut.string(date: date)
+        XCTAssertEqual(newStringDate, "1970-01-01T07:00:00-0500")
+    }
+    
+  
     
 }
