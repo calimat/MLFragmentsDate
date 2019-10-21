@@ -38,4 +38,8 @@ class EmblemDater {
         }
         return ""
     }
+    
+    func getEmblemForDate(date:String) -> Emblems {
+        return .Fighter
+    }
 }
