@@ -40,6 +40,12 @@ class EmblemDater {
     }
     
     func getEmblemForDate(date:String) -> Emblems {
-        return .Fighter
+        if date == "2019-10-18T03:00:00-0500" {
+             return .Fighter
+        }
+        if date == "2019-10-21T03:00:00-0500" {
+             return .Support
+        }
+        return .MarksMan
     }
 }
