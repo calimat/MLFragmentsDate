@@ -9,33 +9,24 @@ class EmblemDater {
         self.dateFormatAdapter = dateFromatAdapter
     }
     
-    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {       
-        if currentDate == baseDateStringFighterEmblem {
-            switch emblem {
-            case .Support:
-                let newDate = self.dateFormatAdapter.add(days: 3, startDate: currentDate)
-                return newDate.description
-            case .MarksMan:
-                let newDate =  self.dateFormatAdapter.add(days: 6, startDate: currentDate)
-                return newDate.description
-            case .Tank:
-                let newDate =  self.dateFormatAdapter.add(days: 9, startDate: currentDate)
-                return newDate.description
-            case .Jungle:
-                let newDate =  self.dateFormatAdapter.add(days: 12, startDate: currentDate)
-                return newDate.description
-            case .Assassin:
-                let newDate =  self.dateFormatAdapter.add(days: 15, startDate: currentDate)
-                return newDate.description
-            case .Mage:
-                let newDate =  self.dateFormatAdapter.add(days: 18, startDate: currentDate)
-                return newDate.description
-            default:
-                let newDate =  self.dateFormatAdapter.add(days: 21, startDate: currentDate)
-                return newDate.description
-            }
+    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
+        var currentEmblem = getEmblemForDate(date: currentDate)
+        var baseCurrentDate = dateFormatAdapter.date(isoStringDate: currentDate)
+        var days = 0
+        var enteredWhileLoop = false
+        while currentEmblem != emblem   {
+            enteredWhileLoop = true
+            days += 1
+            baseCurrentDate = dateFormatAdapter.add(days: days, startDate: currentDate)
+            currentEmblem = getEmblemForDate(date: dateFormatAdapter.string(date: baseCurrentDate))
         }
-        return ""
+        
+        if !enteredWhileLoop {
+              baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
+        }
+        
+        return baseCurrentDate.description
+        
     }
     
     func getEmblemForDate(date:String) -> Emblems {
