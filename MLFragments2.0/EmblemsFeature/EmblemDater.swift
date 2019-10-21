@@ -10,7 +10,8 @@ class EmblemDater {
     
     func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
        
-        if currentDate == "2019-10-18T03:00:00-0500" {
+        let baseDateFighterEmblem = "2019-10-18T03:00:00-0500"
+        if currentDate == baseDateFighterEmblem {
             switch emblem {
             case .Support:
                 let newDate = self.dateFormatAdapter.add(days: 3, startDate: currentDate)
