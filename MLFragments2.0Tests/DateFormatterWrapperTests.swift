@@ -28,5 +28,6 @@ class DateFormatterWrapperTests: XCTestCase {
            let strDate = "2019-10-18T08:00:00+0000"
            let newDate = sut.add(days:3, startDate: strDate)
            XCTAssertEqual(newDate.description, "2019-10-21 08:00:00 +0000")
-       }
+    }
+    
 }

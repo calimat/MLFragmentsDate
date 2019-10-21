@@ -40,10 +40,10 @@ class EmblemDater {
     
     func getEmblemForDate(date:String) -> Emblems {
         let baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
-        if date == "2019-10-18T03:00:00-0500" {
+        if date == baseDate.description {
              return .Fighter
         }
-        if date == "2019-10-21T03:00:00-0500" {
+        if date == dateFormatAdapter.add(days: 3, startDate: baseDateStringFighterEmblem).description {
              return .Support
         }
         return .MarksMan
