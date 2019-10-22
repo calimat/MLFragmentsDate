@@ -14,7 +14,7 @@
 		F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F7E235ACC9E001D1D15 /* Emblems.swift */; };
 		F6384F83235B7102001D1D15 /* DateFormatterWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */; };
 		F6384F85235B7BDF001D1D15 /* DateFormatterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */; };
-		F6384F87235B7C0F001D1D15 /* DataFormaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F86235B7C0F001D1D15 /* DataFormaterAdapter.swift */; };
+		F6384F87235B7C0F001D1D15 /* DateFormaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F86235B7C0F001D1D15 /* DateFormaterAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 		F6384F7E235ACC9E001D1D15 /* Emblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emblems.swift; sourceTree = "<group>"; };
 		F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapperTests.swift; sourceTree = "<group>"; };
 		F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapper.swift; sourceTree = "<group>"; };
-		F6384F86235B7C0F001D1D15 /* DataFormaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormaterAdapter.swift; sourceTree = "<group>"; };
+		F6384F86235B7C0F001D1D15 /* DateFormaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		F6384F89235B7C55001D1D15 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				F6384F86235B7C0F001D1D15 /* DataFormaterAdapter.swift */,
+				F6384F86235B7C0F001D1D15 /* DateFormaterAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 				F6384F7D235ACC7A001D1D15 /* EmblemDater.swift in Sources */,
 				F6384F85235B7BDF001D1D15 /* DateFormatterWrapper.swift in Sources */,
 				F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */,
-				F6384F87235B7C0F001D1D15 /* DataFormaterAdapter.swift in Sources */,
+				F6384F87235B7C0F001D1D15 /* DateFormaterAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
