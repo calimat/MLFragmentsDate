@@ -1,4 +1,4 @@
-enum Emblems: CaseIterable  {
+public enum Emblems: String,  CaseIterable  {
     case Fighter
     case Support
     case MarksMan
@@ -7,3 +7,6 @@ enum Emblems: CaseIterable  {
     case Assassin
     case Mage
 }
+
+public let emblemsRawValueArray = Emblems.allCases.map { $0.rawValue }
+

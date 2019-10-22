@@ -1,15 +1,15 @@
 import Foundation
 
-class EmblemDater {
+public class EmblemDater {
     
     let dateFormatAdapter: DateFormaterAdapter
     let baseDateStringFighterEmblem = "2019-10-18T03:00:00-0500"
     
-    init(dateFromatAdapter: DateFormaterAdapter) {
+    public init(dateFromatAdapter: DateFormaterAdapter) {
         self.dateFormatAdapter = dateFromatAdapter
     }
     
-    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
+   public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
         var currentEmblem = getEmblemForDate(date: currentDate)
         var baseCurrentDate = dateFormatAdapter.date(isoStringDate: currentDate)
         var days = 0
