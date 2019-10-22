@@ -30,17 +30,16 @@ class EmblemDater {
     }
     
     func getEmblemForDate(date:String) -> Emblems {
-        var baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)
-        let emblemsArray = [Emblems.Fighter, Emblems.Support, Emblems.MarksMan, Emblems.Tank, Emblems.Jungle, Emblems.Assassin, Emblems.Mage]
+        var baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)        
         let dateForEmblem = dateFormatAdapter.date(isoStringDate: date)
         var currentEmblemIndex = 0
-        var currentEmblem = Emblems.Fighter
+        var currentEmblem = Emblems.allCases[0]
         var days = 0
         while(baseDate < dateForEmblem) {
             days += 1
             if( days % 3 == 0) {
-                currentEmblemIndex = (currentEmblemIndex + 1) % emblemsArray.count
-                currentEmblem = emblemsArray[currentEmblemIndex]
+                currentEmblemIndex = (currentEmblemIndex + 1) % Emblems.allCases.count
+                currentEmblem = Emblems.allCases[currentEmblemIndex]
             }
             
             baseDate = dateFormatAdapter.add(days: days, startDate: baseDateStringFighterEmblem)
