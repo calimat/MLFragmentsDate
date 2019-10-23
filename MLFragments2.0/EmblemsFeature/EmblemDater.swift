@@ -11,7 +11,7 @@ public class EmblemDater {
         self.calendarAdapter = calendarAdapter
     }
     
-   public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
+   public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> Date {
         var currentEmblem = getEmblemForDate(date: currentDate)
         var baseCurrentDate = dateFormatAdapter.date(isoStringDate: currentDate)
         var days = 0
@@ -27,9 +27,10 @@ public class EmblemDater {
               baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
         }
         
-        return baseCurrentDate.description
+        return baseCurrentDate
         
     }
+    
     
     func getEmblemForDate(date:String) -> Emblems {
         var baseDate = dateFormatAdapter.date(isoStringDate: baseDateStringFighterEmblem)        

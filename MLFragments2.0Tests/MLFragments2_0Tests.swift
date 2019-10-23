@@ -9,51 +9,51 @@ class MLFragments2_0Tests: XCTestCase {
     
     func test_NextCurrentAvailableDateForSupportWhenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Support ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-10-21 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-10-21 08:00:00 +0000")
         
     }
     
     func test_NextCurrentAvailableDateForMarksManWhenCurrentDateIs23Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .MarksMan ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-10-24 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-10-24 08:00:00 +0000")
         
     }
 
     func test_NextCurrentAvailableDateForMarksManWhenCurrentDateIs21Oct2019() {
            let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .MarksMan ,currentDate: "2019-10-21T03:00:00-0500")
-           XCTAssertEqual(nextAvailableDate,"2019-10-24 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-10-24 08:00:00 +0000")
            
        }
     
     func test_NextCurrentAvailableDateForTankhenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Tank ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-10-27 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-10-27 08:00:00 +0000")
         
     }
     
     func test_NextCurrentAvailableDateForJunglehenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Jungle ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-10-30 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-10-30 08:00:00 +0000")
     }
     
     func test_NextCurrentAvailableDateForAssasinWhenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Assassin  ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-11-02 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-11-02 08:00:00 +0000")
     }
     
     func test_NextCurrentAvailableDateForMageWhenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Mage  ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-11-05 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-11-05 08:00:00 +0000")
     }
     
     func test_NextCurrentAvailableDateForFighterWhenCurrentDateIs18Oct2019() {
         let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Fighter  ,currentDate: currentDate)
-        XCTAssertEqual(nextAvailableDate,"2019-11-08 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-11-08 08:00:00 +0000")
     }
     
     func test_NextCurrentAvailableDateForFighterWhenCurrentDateIs08Nov2019() {
           let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Fighter  ,currentDate: "2019-11-08T03:00:00-0500")
-          XCTAssertEqual(nextAvailableDate,"2019-11-29 08:00:00 +0000")
+        XCTAssertEqual(nextAvailableDate.description,"2019-11-29 08:00:00 +0000")
       }
     
     func test_GetCurrentEmblemFighterFor2019_10_18() {
@@ -115,6 +115,8 @@ class MLFragments2_0Tests: XCTestCase {
          XCTAssertEqual(emblem, Emblems.Support)
             
     }
+    
+    
     
   
 }
