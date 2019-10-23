@@ -25,7 +25,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     public func string(date: Date) -> String {
         let dateFormatter = ISO8601DateFormatter()
          dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
-        dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone, .withFullTime]
+        dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
         let stringDate = dateFormatter.string(from: date)
         return stringDate
     }

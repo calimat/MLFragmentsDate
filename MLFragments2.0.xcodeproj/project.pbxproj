@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CCED61A2360CDD800A127D8 /* CalendarWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED6192360CDD800A127D8 /* CalendarWrapperTests.swift */; };
+		8CCED61C2360CE3900A127D8 /* CalendarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */; };
+		8CCED61E2360D03500A127D8 /* CalendarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED61D2360D03500A127D8 /* CalendarAdapter.swift */; };
 		F6384F6C235A9E31001D1D15 /* MLFragments2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6384F62235A9E31001D1D15 /* MLFragments2_0.framework */; };
 		F6384F71235A9E31001D1D15 /* MLFragments2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6384F70235A9E31001D1D15 /* MLFragments2_0Tests.swift */; };
 		F6384F73235A9E31001D1D15 /* MLFragments2_0.h in Headers */ = {isa = PBXBuildFile; fileRef = F6384F65235A9E31001D1D15 /* MLFragments2_0.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8CCED6192360CDD800A127D8 /* CalendarWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperTests.swift; sourceTree = "<group>"; };
+		8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapper.swift; sourceTree = "<group>"; };
+		8CCED61D2360D03500A127D8 /* CalendarAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAdapter.swift; sourceTree = "<group>"; };
 		F6384F62235A9E31001D1D15 /* MLFragments2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLFragments2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6384F65235A9E31001D1D15 /* MLFragments2_0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFragments2_0.h; sourceTree = "<group>"; };
 		F6384F66235A9E31001D1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 				F6384F70235A9E31001D1D15 /* MLFragments2_0Tests.swift */,
 				F6384F72235A9E31001D1D15 /* Info.plist */,
 				F6384F82235B7102001D1D15 /* DateFormatterWrapperTests.swift */,
+				8CCED6192360CDD800A127D8 /* CalendarWrapperTests.swift */,
 			);
 			path = MLFragments2.0Tests;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */,
+				8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F6384F86235B7C0F001D1D15 /* DateFormaterAdapter.swift */,
+				8CCED61D2360D03500A127D8 /* CalendarAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -239,6 +248,8 @@
 				F6384F85235B7BDF001D1D15 /* DateFormatterWrapper.swift in Sources */,
 				F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */,
 				F6384F87235B7C0F001D1D15 /* DateFormaterAdapter.swift in Sources */,
+				8CCED61C2360CE3900A127D8 /* CalendarWrapper.swift in Sources */,
+				8CCED61E2360D03500A127D8 /* CalendarAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +259,7 @@
 			files = (
 				F6384F71235A9E31001D1D15 /* MLFragments2_0Tests.swift in Sources */,
 				F6384F83235B7102001D1D15 /* DateFormatterWrapperTests.swift in Sources */,
+				8CCED61A2360CDD800A127D8 /* CalendarWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
