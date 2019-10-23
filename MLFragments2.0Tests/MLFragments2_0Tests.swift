@@ -4,7 +4,7 @@ import XCTest
 
 class MLFragments2_0Tests: XCTestCase {
     
-    var sut: EmblemDater = EmblemDater(dateFromatAdapter: DateFormatterWrapper())
+    var sut: EmblemDater = EmblemDater(dateFromatAdapter: DateFormatterWrapper(), calendarAdapter: CalendarWrapper())
     let currentDate = "2019-10-18T03:00:00-0500"
     
     func test_NextCurrentAvailableDateForSupportWhenCurrentDateIs18Oct2019() {
@@ -110,11 +110,11 @@ class MLFragments2_0Tests: XCTestCase {
         
     }
     
-//    func test_GetCurrentEmblemFighterFor2019_10_18_AndOneSecond() {
-//            let emblem = sut.getEmblemForDate(date: "2019-10-23T03:00:01-0500")
-//         XCTAssertEqual(emblem, Emblems.Support)
-//            
-//    }
+    func test_GetCurrentEmblemFighterFor2019_10_18_AndOneSecond() {
+            let emblem = sut.getEmblemForDate(date: "2019-10-23T03:00:01-0500")
+         XCTAssertEqual(emblem, Emblems.Support)
+            
+    }
     
   
 }

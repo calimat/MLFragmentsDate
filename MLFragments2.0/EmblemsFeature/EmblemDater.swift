@@ -3,10 +3,12 @@ import Foundation
 public class EmblemDater {
     
     let dateFormatAdapter: DateFormaterAdapter
+    let calendarAdapter : CalendarAdapter
     let baseDateStringFighterEmblem = "2019-10-18T03:00:00-0500"
     
-    public init(dateFromatAdapter: DateFormaterAdapter) {
+    public init(dateFromatAdapter: DateFormaterAdapter, calendarAdapter: CalendarAdapter) {
         self.dateFormatAdapter = dateFromatAdapter
+        self.calendarAdapter = calendarAdapter
     }
     
     func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
@@ -36,6 +38,9 @@ public class EmblemDater {
         var currentEmblem = Emblems.allCases[0]
         var days = 0
         while(baseDate < dateForEmblem) {
+            if(calendarAdapter.isDate(date1: baseDate, inSameDayAs: dateForEmblem)) {
+                break;
+            }
             days += 1
             if( days % 3 == 0) {
                 currentEmblemIndex = (currentEmblemIndex + 1) % Emblems.allCases.count
