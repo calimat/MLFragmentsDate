@@ -9,7 +9,7 @@ public class EmblemDater {
         self.dateFormatAdapter = dateFromatAdapter
     }
     
-   public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
+    func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> String {
         var currentEmblem = getEmblemForDate(date: currentDate)
         var baseCurrentDate = dateFormatAdapter.date(isoStringDate: currentDate)
         var days = 0

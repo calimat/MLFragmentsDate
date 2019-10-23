@@ -22,6 +22,13 @@ class DateFormatterWrapperTests: XCTestCase {
         XCTAssertEqual(newDate.description, "2019-10-19 08:00:00 +0000")
     }
     
+    func testAddAnHourToDate() {
+        let strDate = "2019-10-18T08:00:00+0000"
+        let newDate = sut.add(hours: 1, startDate: strDate)
+        XCTAssertEqual(newDate.description, "2019-10-18 09:00:00 +0000")
+        
+    }
+    
     func testAddThreeDaysToDate() {
         let strDate = "2019-10-18T08:00:00+0000"
         let newDate = sut.add(days:3, startDate: strDate)
