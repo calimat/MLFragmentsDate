@@ -24,17 +24,30 @@ public class EmblemDater {
         }
         
         if !enteredWhileLoop {
-         
-            baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
+            let yesterdayDate = dateFormatAdapter.add(days: -1, startDate: currentDate)
+            let yesterdayDateString = dateFormatAdapter.string(date: yesterdayDate)
+            let tommorrowDate = dateFormatAdapter.add(days: 1, startDate: currentDate)
+            let tommorrowDateString = dateFormatAdapter.string(date: tommorrowDate)
+            let yesterdayEmblem = getEmblemForDate(date: yesterdayDateString)
+            let tommorowEmblem = getEmblemForDate(date: tommorrowDateString)
+            
+            if yesterdayEmblem == currentEmblem && tommorowEmblem == currentEmblem {
+                baseCurrentDate = dateFormatAdapter.add(days: 20, startDate: currentDate)
+            } else if yesterdayEmblem != currentEmblem && tommorowEmblem == currentEmblem  {
+                baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
+            } else if yesterdayEmblem == currentEmblem && tommorowEmblem != currentEmblem {
+                 baseCurrentDate = dateFormatAdapter.add(days: 19, startDate: currentDate)
+            }
         }
         
         let newDate = calendarAdapter.date(bySettingHour: 3, minute: 0, second: 0, of: baseCurrentDate)
         
-     
+        
         return newDate
         
         
     }
+    
     
     
     func getEmblemForDate(date:String) -> Emblems {

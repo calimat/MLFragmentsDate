@@ -66,11 +66,16 @@ class MLFragments2_0Tests: XCTestCase {
                XCTAssertEqual(nextAvailableDate.description,"2019-11-23 08:00:00 +0000")
     }
     
-//      func test_NextCurrentAvailableDayeForAssasinWhenCurrentDateIs03Nov2019() {
-//          let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Assassin  ,currentDate: "2019-11-03T12:32:00-0500")
-//                 XCTAssertEqual(nextAvailableDate.description,"2019-11-23 08:00:00 +0000")
-//      }
-//
+      func test_NextCurrentAvailableDayeForAssasinWhenCurrentDateIs03Nov2019() {
+          let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Assassin  ,currentDate: "2019-11-03T12:32:00-0500")
+                 XCTAssertEqual(nextAvailableDate.description,"2019-11-23 08:00:00 +0000")
+      }
+    
+    func test_NextCurrentAvailableDayeForAssasinWhenCurrentDateIs04Nov2019() {
+             let nextAvailableDate = sut.getNextAvailableDateFor(emblem: .Assassin  ,currentDate: "2019-11-04T12:32:00-0500")
+                    XCTAssertEqual(nextAvailableDate.description,"2019-11-23 08:00:00 +0000")
+         }
+
     
     func test_GetCurrentEmblemFighterFor2019_10_18() {
         let emblem = sut.getEmblemForDate(date: "2019-10-18T03:00:00-0500")
