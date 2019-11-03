@@ -24,8 +24,16 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     
     public func string(date: Date) -> String {
         let dateFormatter = ISO8601DateFormatter()
-         dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
         dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
+        let stringDate = dateFormatter.string(from: date)
+        return stringDate
+    }
+    
+    public func getFriendlyDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .short
         let stringDate = dateFormatter.string(from: date)
         return stringDate
     }

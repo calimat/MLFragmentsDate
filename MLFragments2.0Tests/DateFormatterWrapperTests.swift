@@ -47,4 +47,16 @@ class DateFormatterWrapperTests: XCTestCase {
         XCTAssertEqual(newStringDate, "1969-12-31T19:00:01-05:00")
     }
     
+    func test_PresentDateInFriendlyFormat() {
+           let date = Date(timeIntervalSince1970: 0)
+           let stringDate = sut.getFriendlyDate(date: date)
+           XCTAssertEqual(stringDate, "Wednesday, December 31, 1969 at 7:00 PM")
+    }
+    
+    func test_PresentDateInFriendlyFormatSecondTest() {
+           let date = Date(timeIntervalSince1970: 19828)
+           let stringDate = sut.getFriendlyDate(date: date)
+           XCTAssertEqual(stringDate, "Thursday, January 1, 1970 at 12:30 AM")
+    }
+    
 }
