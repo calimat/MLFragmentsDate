@@ -24,12 +24,13 @@ public class EmblemDater {
         }
         
         if !enteredWhileLoop {
+         
             baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
         }
         
         let newDate = calendarAdapter.date(bySettingHour: 3, minute: 0, second: 0, of: baseCurrentDate)
         
-        
+     
         return newDate
         
         
@@ -55,7 +56,8 @@ public class EmblemDater {
             
             baseDate = dateFormatAdapter.add(days: days, startDate: baseDateStringFighterEmblem)
         }
-        return currentEmblem
+        
+        return baseDate > dateForEmblem ? Emblems.Mage : currentEmblem
         
     }
 }
