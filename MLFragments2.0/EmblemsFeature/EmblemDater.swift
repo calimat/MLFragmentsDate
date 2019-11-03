@@ -11,7 +11,7 @@ public class EmblemDater {
         self.calendarAdapter = calendarAdapter
     }
     
-   public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> Date {
+    public func getNextAvailableDateFor(emblem:Emblems, currentDate:String) -> Date {
         var currentEmblem = getEmblemForDate(date: currentDate)
         var baseCurrentDate = dateFormatAdapter.date(isoStringDate: currentDate)
         var days = 0
@@ -24,10 +24,14 @@ public class EmblemDater {
         }
         
         if !enteredWhileLoop {
-              baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
+            baseCurrentDate = dateFormatAdapter.add(days: 21, startDate: currentDate)
         }
         
-        return baseCurrentDate
+        let newDate = calendarAdapter.date(bySettingHour: 3, minute: 0, second: 0, of: baseCurrentDate)
+        
+        
+        return newDate
+        
         
     }
     
@@ -47,6 +51,7 @@ public class EmblemDater {
                 currentEmblemIndex = (currentEmblemIndex + 1) % Emblems.allCases.count
                 currentEmblem = Emblems.allCases[currentEmblemIndex]
             }
+            
             
             baseDate = dateFormatAdapter.add(days: days, startDate: baseDateStringFighterEmblem)
         }

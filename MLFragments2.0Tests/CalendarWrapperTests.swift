@@ -26,6 +26,20 @@ class CalendarWrapperTests: XCTestCase {
         let isTheSameDay = sut.isDate(date1:date1, inSameDayAs:date2)
         XCTAssertFalse(isTheSameDay)
     }
+    
+    func test_MinDateSetsTo8_00_GMT() {
+        let date = Date(timeIntervalSince1970: 0)
+        let sut = CalendarWrapper()
+        let newDate = sut.date(bySettingHour: 3, minute: 0, second: 0, of: date)
+        XCTAssertEqual(newDate.description, "1969-12-31 08:00:00 +0000")
+    }
+    
+    func test_MinDateAndOneSecondSetsTo_8_00_GMT() {
+        let date = Date(timeIntervalSince1970: 1)
+        let sut = CalendarWrapper()
+        let newDate = sut.date(bySettingHour: 3, minute: 0, second: 0, of: date)
+        XCTAssertEqual(newDate.description, "1969-12-31 08:00:00 +0000")
+    }
 
     
 }
