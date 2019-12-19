@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/calimat/MLFragmentsDate.svg?branch=master)](https://travis-ci.org/calimat/MLFragmentsDate)
