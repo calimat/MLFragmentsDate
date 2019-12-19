@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C5A482623ABECF5002A565F /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A482523ABECF5002A565F /* DateConstants.swift */; };
 		8CCED61A2360CDD800A127D8 /* CalendarWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED6192360CDD800A127D8 /* CalendarWrapperTests.swift */; };
 		8CCED61C2360CE3900A127D8 /* CalendarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */; };
 		8CCED61E2360D03500A127D8 /* CalendarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCED61D2360D03500A127D8 /* CalendarAdapter.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C5A482523ABECF5002A565F /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
 		8CCED6192360CDD800A127D8 /* CalendarWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperTests.swift; sourceTree = "<group>"; };
 		8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapper.swift; sourceTree = "<group>"; };
 		8CCED61D2360D03500A127D8 /* CalendarAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAdapter.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				F6384F84235B7BDF001D1D15 /* DateFormatterWrapper.swift */,
 				8CCED61B2360CE3900A127D8 /* CalendarWrapper.swift */,
+				8C5A482523ABECF5002A565F /* DateConstants.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5A482623ABECF5002A565F /* DateConstants.swift in Sources */,
 				F6384F7D235ACC7A001D1D15 /* EmblemDater.swift in Sources */,
 				F6384F85235B7BDF001D1D15 /* DateFormatterWrapper.swift in Sources */,
 				F6384F7F235ACC9E001D1D15 /* Emblems.swift in Sources */,

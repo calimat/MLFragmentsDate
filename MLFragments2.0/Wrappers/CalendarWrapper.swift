@@ -2,7 +2,7 @@ public class CalendarWrapper: CalendarAdapter {
     var calendar:Calendar
     public init() {
        calendar = Calendar(identifier: .gregorian)
-       calendar.timeZone = TimeZone(abbreviation: "COT")!
+       calendar.timeZone = BOGOTA_TIMEZONE
     }
     public func isDate(date1:Date, inSameDayAs date2:Date) -> Bool {
         return calendar.isDate(date1, inSameDayAs: date2)

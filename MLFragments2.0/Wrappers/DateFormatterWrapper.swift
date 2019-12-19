@@ -6,9 +6,9 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     
     public init() {
          isoDateFormatter = ISO8601DateFormatter()
-         isoDateFormatter.timeZone = TimeZone(abbreviation: "COT")!
+         isoDateFormatter.timeZone = BOGOTA_TIMEZONE
          dateFormatter = DateFormatter()
-         dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
+         dateFormatter.timeZone = BOGOTA_TIMEZONE
     }
     
     public func date(isoStringDate: String) -> Date {
