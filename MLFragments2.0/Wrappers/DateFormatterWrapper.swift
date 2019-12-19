@@ -6,7 +6,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     }
     public func date(isoStringDate: String) -> Date {
         let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
+        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
         let date = dateFormatter.date(from:isoStringDate)!
         return date
     }
@@ -25,7 +25,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     
     public func string(date: Date) -> String {
         let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
+        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
         dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
         let stringDate = dateFormatter.string(from: date)
         return stringDate
@@ -33,7 +33,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     
     public func getFriendlyDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
+        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .short
         let stringDate = dateFormatter.string(from: date)
