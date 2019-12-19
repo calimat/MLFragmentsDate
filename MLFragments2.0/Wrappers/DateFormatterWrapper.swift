@@ -1,13 +1,18 @@
 import Foundation
 
 public class DateFormatterWrapper : DateFormaterAdapter {
+    let isoDateFormatter: ISO8601DateFormatter
+    let dateFormatter: DateFormatter
+    
     public init() {
-        
+         isoDateFormatter = ISO8601DateFormatter()
+         isoDateFormatter.timeZone = TimeZone(abbreviation: "COT")!
+         dateFormatter = DateFormatter()
+         dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
     }
+    
     public func date(isoStringDate: String) -> Date {
-        let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
-        let date = dateFormatter.date(from:isoStringDate)!
+        let date = isoDateFormatter.date(from:isoStringDate)!
         return date
     }
     
@@ -24,16 +29,12 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     }
     
     public func string(date: Date) -> String {
-        let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
-        dateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
-        let stringDate = dateFormatter.string(from: date)
+        isoDateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
+        let stringDate = isoDateFormatter.string(from: date)
         return stringDate
     }
     
     public func getFriendlyDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "COT")!
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .short
         let stringDate = dateFormatter.string(from: date)
