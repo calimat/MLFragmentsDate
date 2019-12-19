@@ -7,6 +7,8 @@ public class CalendarWrapper: CalendarAdapter {
     }
     
     public func date(bySettingHour hour: Int, minute: Int, second: Int, of date: Date) -> Date {
+        
         return Calendar.current.date(bySettingHour: hour, minute: minute, second: second, of: date)!
      }
+    
 }

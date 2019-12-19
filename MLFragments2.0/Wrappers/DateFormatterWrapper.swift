@@ -6,6 +6,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     }
     public func date(isoStringDate: String) -> Date {
         let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
         let date = dateFormatter.date(from:isoStringDate)!
         return date
     }
@@ -32,6 +33,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     
     public func getFriendlyDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-5")
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .short
         let stringDate = dateFormatter.string(from: date)
