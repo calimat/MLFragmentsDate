@@ -1,14 +1,16 @@
 import Foundation
 
 public class DateFormatterWrapper : DateFormaterAdapter {
+
+    
     let isoDateFormatter: ISO8601DateFormatter
     let dateFormatter: DateFormatter
     
     public init() {
          isoDateFormatter = ISO8601DateFormatter()
-         isoDateFormatter.timeZone = BOGOTA_TIMEZONE
+         //isoDateFormatter.timeZone = BOGOTA_TIMEZONE
          dateFormatter = DateFormatter()
-         dateFormatter.timeZone = BOGOTA_TIMEZONE
+         //dateFormatter.timeZone = BOGOTA_TIMEZONE
     }
     
     public func date(isoStringDate: String) -> Date {
@@ -28,16 +30,17 @@ public class DateFormatterWrapper : DateFormaterAdapter {
         return newDate
     }
     
-    public func string(date: Date) -> String {
+    public func string(date: Date, withTimezone timezone:TimeZone? = TimeZone(abbreviation: "BOT")) -> String {
         isoDateFormatter.formatOptions = [.withInternetDateTime, .withDashSeparatorInDate, .withColonSeparatorInTime, .withColonSeparatorInTimeZone]
+        isoDateFormatter.timeZone = timezone
         let stringDate = isoDateFormatter.string(from: date)
         return stringDate
     }
     
-    public func getFriendlyDate(date: Date) -> String {
-        dateFormatter.timeZone = TimeZone.current
+    public func getFriendlyDate(date: Date, with Timezone:TimeZone? = TimeZone(abbreviation: "BOT")) -> String {
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .short
+        dateFormatter.timeZone = Timezone
         let stringDate = dateFormatter.string(from: date)
         return stringDate
     }

@@ -37,13 +37,13 @@ class DateFormatterWrapperTests: XCTestCase {
     
     func testDateFrom1970ToString() {
         let date = Date(timeIntervalSince1970: 0)
-        let newStringDate = sut.string(date: date)
+        let newStringDate = sut.string(date: date, withTimezone: BOGOTA_TIMEZONE)
         XCTAssertEqual(newStringDate, "1969-12-31T19:00:00-05:00")
     }
     
     func testDateFrom1970And1ToString() {
         let date = Date(timeIntervalSince1970: 1)
-        let newStringDate = sut.string(date: date)
+        let newStringDate = sut.string(date: date, withTimezone: BOGOTA_TIMEZONE)
         XCTAssertEqual(newStringDate, "1969-12-31T19:00:01-05:00")
     }
     
@@ -57,6 +57,31 @@ class DateFormatterWrapperTests: XCTestCase {
            let date = Date(timeIntervalSince1970: 19828)
            let stringDate = sut.getFriendlyDate(date: date)
            XCTAssertEqual(stringDate, "Thursday, January 1, 1970 at 12:30 AM")
+    }
+    
+    func test_DateForTimeZone_PDT() {
+        let date = getDate(day: 30, month: 7, year: 2020, hour: 11, minute: 31, second: 0, timezone: PACIFIC_TIMEZONE)
+        let stringDate = sut.getFriendlyDate(date: date!, with: PACIFIC_TIMEZONE)
+        XCTAssertEqual(stringDate, "Thursday, July 30, 2020 at 11:31 AM")
+    }
+    
+    func test_DateForTimeZone_BOT() {
+           let date = getDate(day: 30, month: 7, year: 2020, hour: 11, minute: 31, second: 0, timezone: BOGOTA_TIMEZONE)
+           let stringDate = sut.getFriendlyDate(date: date!, with: BOGOTA_TIMEZONE)
+           XCTAssertEqual(stringDate, "Thursday, July 30, 2020 at 11:31 AM")
+       }
+    
+    func getDate(day:Int, month:Int, year:Int, hour:Int, minute:Int, second:Int, timezone:TimeZone) -> Date? {
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.day = day
+        dateComponents.month = month
+        dateComponents.year = year
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        dateComponents.second = second
+        dateComponents.timeZone = timezone
+        return calendar.date(from: dateComponents)
     }
     
 }

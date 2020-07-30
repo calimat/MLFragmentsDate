@@ -5,6 +5,7 @@ public class EmblemDater {
     let dateFormatAdapter: DateFormaterAdapter
     let calendarAdapter : CalendarAdapter
     let baseDateStringFighterEmblem = "2019-10-18T03:00:00-0500"
+
     
     public init(dateFromatAdapter: DateFormaterAdapter, calendarAdapter: CalendarAdapter) {
         self.dateFormatAdapter = dateFromatAdapter
@@ -20,14 +21,14 @@ public class EmblemDater {
             enteredWhileLoop = true
             days += 1
             baseCurrentDate = dateFormatAdapter.add(days: days, startDate: currentDate)
-            currentEmblem = getEmblemForDate(date: dateFormatAdapter.string(date: baseCurrentDate))
+            currentEmblem = getEmblemForDate(date: dateFormatAdapter.string(date: baseCurrentDate, withTimezone: BOGOTA_TIMEZONE))
         }
         
         if !enteredWhileLoop {
             let yesterdayDate = dateFormatAdapter.add(days: -1, startDate: currentDate)
-            let yesterdayDateString = dateFormatAdapter.string(date: yesterdayDate)
+            let yesterdayDateString = dateFormatAdapter.string(date: yesterdayDate, withTimezone: BOGOTA_TIMEZONE)
             let tommorrowDate = dateFormatAdapter.add(days: 1, startDate: currentDate)
-            let tommorrowDateString = dateFormatAdapter.string(date: tommorrowDate)
+            let tommorrowDateString = dateFormatAdapter.string(date: tommorrowDate, withTimezone: BOGOTA_TIMEZONE)
             let yesterdayEmblem = getEmblemForDate(date: yesterdayDateString)
             let tommorowEmblem = getEmblemForDate(date: tommorrowDateString)
             
