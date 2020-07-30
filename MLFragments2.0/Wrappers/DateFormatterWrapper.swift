@@ -35,6 +35,7 @@ public class DateFormatterWrapper : DateFormaterAdapter {
     }
     
     public func getFriendlyDate(date: Date) -> String {
+        dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .short
         let stringDate = dateFormatter.string(from: date)
